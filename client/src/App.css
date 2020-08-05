@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+  --box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d4efff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  margin: 30px auto;
+  width: 30rem;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 3rem 0 1rem;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.bal-tal-container {
+  background-color: #fefefe;
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.bal-tal-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.bal-tal-container > div:first-of-type {
+  border-right: 1px solid #fefefe;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #00dd00;
+}
+
+.money.minus {
+  color: #ff0000;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #ccc;
+  background-color: #fefefe;
+  border-radius: 4px;
+  display: block;
+  box-shadow: var(--box-shadow);
+  font-size: 1rem;
+  padding: .5rem;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #21a71c;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  color: #fefefe;
+  font-family: 'Montserrat', sans-serif;
+  border: 0;
+  display: inline-block;
+  font-size: 1.25rem;
+  margin: 2rem 0 2rem;
+  padding: .5rem;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fefefe;
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #00dd00;
+}
+
+.list li.minus {
+  border-right: 5px solid #ff0000;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #ff2539;
+  border-radius: 4px;
+  border: 0;
+  color: #fefefe;
+  font-size: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 300px;
+  }
+}
